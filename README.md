@@ -1,13 +1,11 @@
 # poker
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed to score a collection of poker hands
 
 ## Usage
 
-FIXME
+(poker [["AC" "AD" "AH" "AS"] ["2S" "3S" "4S" "5S" "6S"]])
 
 ## License
 
-Copyright © 2012 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+Public domain. Use at own risk.

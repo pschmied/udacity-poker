@@ -47,11 +47,6 @@
    (n-of-kind 2 (card-ranks hand)) ; 2 pair or one pair
    (card-ranks hand)]) ; the final tie-breaker
 
-(defn poker
-  "Return the best hand(s) from a seq of hands"
-  [hands]
-  (apply all-max-key hand-rank hands))
-
 (defn all-max-key
   ;; Rescued by Michal Marczyk http://goo.gl/LYl5w
   "Returns a vector of x for which (k x), arbitrated by compare, are greatest."
@@ -64,6 +59,11 @@
                :else (conj ys x))))
           [x]
           xs))
+
+(defn poker
+  "Return the best hand(s) from a seq of hands"
+  [hands]
+  (apply all-max-key hand-rank hands))
 
 (defn best-hand
   [hand]
